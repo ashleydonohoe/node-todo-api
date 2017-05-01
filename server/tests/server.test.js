@@ -115,14 +115,10 @@ describe('DELETE /todos/:id', () => {
 
   it("should return 404 if todo not found", (done) => {
       let id = "5904088504c7d7848efccc3a";
-
       request(app).delete(`/todos/${id}`).expect(404).end(done);
-
   });
 
   it("should return 404 for non-object id", (done) => {
-
     request(app).delete("/todos/123").expect(404).end(done);
-
   });
 });
